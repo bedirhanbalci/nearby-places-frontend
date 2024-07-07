@@ -19,9 +19,12 @@ class PlaceService {
 
     setError("");
     try {
-      const response = await axios.get("http://localhost:8070/api/place", {
-        params: { longitude, latitude, radius },
-      });
+      const response = await axios.get(
+        "https://nearby-places-backend.onrender.com/api/place",
+        {
+          params: { longitude, latitude, radius },
+        }
+      );
 
       setPlaces(response.data.nearbyPlaceList);
       setSelectedPlace(null);
