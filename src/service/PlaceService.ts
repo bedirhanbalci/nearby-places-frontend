@@ -1,7 +1,6 @@
 import axios from "axios";
 import { validateInputs } from "../utils/Validation";
-
-interface Place {}
+import { PlaceResponse } from "../model/PlaceResponse";
 
 class PlaceService {
   async fetchPlaces(
@@ -9,8 +8,8 @@ class PlaceService {
     latitude: string,
     radius: string,
     setError: (error: string) => void,
-    setPlaces: (places: Place[]) => void,
-    setSelectedPlace: (place: Place | null) => void
+    setPlaces: (places: PlaceResponse[]) => void,
+    setSelectedPlace: (place: PlaceResponse | null) => void
   ) {
     const validationError = validateInputs(longitude, latitude, radius);
     if (validationError) {
