@@ -34,4 +34,5 @@ class PlaceService {
   }
 }
 
-export default new PlaceService();
+const placeService = new PlaceService();
+export { placeService };

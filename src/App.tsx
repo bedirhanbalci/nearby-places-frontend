@@ -3,7 +3,7 @@ import "./App.css";
 import TextInput from "./components/TextInput";
 import { PlaceResponse } from "./model/PlaceResponse";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import PlaceService from "./service/PlaceService";
+import { placeService } from "./service/PlaceService";
 
 const containerStyle = {
   width: "800px",
@@ -74,7 +74,7 @@ const App: React.FC = () => {
 
         <button
           onClick={() => {
-            PlaceService.fetchPlaces(
+            placeService.fetchPlaces(
               longitude,
               latitude,
               radius,
