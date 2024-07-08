@@ -90,9 +90,7 @@ const App: React.FC = () => {
       </div>
       {error && <p className="error">{error}</p>}
       <div ref={mapRef}>
-        <LoadScript
-          googleMapsApiKey={process.env.REACT_APP_MAPS_API_KEY as string}
-        >
+        <LoadScript googleMapsApiKey={process.env.API_KEY as string}>
           <GoogleMap
             mapContainerClassName="google-map-container"
             mapContainerStyle={containerStyle}
