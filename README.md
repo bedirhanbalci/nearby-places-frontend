@@ -2,6 +2,12 @@
 
 ## UI
 
+![Screenshot 1](https://github.com/bedirhanbalci/nearby-places-frontend/assets/61194064/f2460200-add0-43e7-8daa-f0e8479cfe19)
+
+![Screenshot 2](https://github.com/bedirhanbalci/nearby-places-frontend/assets/61194064/286f0ff8-cb8e-44e4-ba57-3942a0d4c905)
+
+![Screenshot 3](https://github.com/bedirhanbalci/nearby-places-frontend/assets/61194064/6b1c7d6e-6833-4e71-a949-361add2698f3)
+
 ## Features
 
 - **Real-time Map Update**: Inputting new coordinates updates the map in real-time.
