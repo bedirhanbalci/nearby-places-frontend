@@ -25,6 +25,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Tell me a secret!
+        run: echo "My existing secret is ${{ secrets.API_KEY }}"
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
@@ -50,6 +53,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          api_key: ${{ secrets.API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
