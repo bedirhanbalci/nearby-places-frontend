@@ -47,15 +47,9 @@ jobs:
           name: production-files
           path: ./build
 
-      - name: Use API_KEY from GitHub Secrets
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
-        run: |
-          ls -la
-          sed -i "s/REACT_APP_MAPS_API_KEY/$API_KEY/g" .env
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          api_key: ${{ secrets.API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
