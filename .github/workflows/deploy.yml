@@ -22,6 +22,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Use API key
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          echo "Using API key..."
+          # Example command using the API key
+          curl -H "Authorization: Bearer $API_KEY" https://api.example.com/data
+
       - name: Build project
         run: npm run build
 
